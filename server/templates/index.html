@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Football Player Value Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        h1 {
+            text-align: center;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Football Player Value Prediction</h1>
+        <form action="/predict" method="POST">
+            <div class="mb-3">
+                <label>Release Clause (in €k)</label>
+                <input class="form-control" type="text" name="release_clause" required>
+            </div>
+            <div class="mb-3">
+                <label>International Reputation</label>
+                <input class="form-control" type="text" name="intl_reputation" required>
+            </div>
+            <div class="mb-3">
+                <label>Overall Rating</label>
+                <input class="form-control" type="text" name="overall_rating" required>
+            </div>
+            <div class="mb-3">
+                <label>Potential</label>
+                <input class="form-control" type="text" name="potential" required>
+            </div>
+            <div class="mb-3">
+                <label>Number of Playstyles</label>
+                <input class="form-control" type="text" name="playstyles" required>
+            </div>
+            <div class="mb-3">
+                <label>Total Stats</label>
+                <input class="form-control" type="text" name="total_stats" required>
+            </div>
+            <div class="mb-3">
+                <label>Age</label>
+                <input class="form-control" type="text" name="age" required>
+            </div>
+            <div class="mb-3">
+                <label>Year</label>
+                <input class="form-control" type="text" name="year" required>
+            </div>
+            <div class="mb-3">
+                <label>Weight (kg)</label>
+                <input class="form-control" type="text" name="weight" required>
+            </div>
+            <div class="mb-3">
+                <label>Height (cm)</label>
+                <input class="form-control" type="text" name="height" required>
+            </div>
+            <div class="mb-3">
+                <label>Position</label>
+                <select class="form-control" name="position" required>
+                    <option value="CAM">CAM</option>
+                    <option value="CB">CB</option>
+                    <option value="CDM">CDM</option>
+                    <option value="CF">CF</option>
+                    <option value="CM">CM</option>
+                    <option value="GK">GK</option>
+                    <option value="LB">LB</option>
+                    <option value="LM">LM</option>
+                    <option value="LW">LW</option>
+                    <option value="LWB">LWB</option>
+                    <option value="RB">RB</option>
+                    <option value="RM">RM</option>
+                    <option value="RW">RW</option>
+                    <option value="RWB">RWB</option>
+                    <option value="ST">ST</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success">Predict</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
