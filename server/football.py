@@ -13,13 +13,12 @@ except Exception as e:
     print(f"Error loading model: {e}")
     model = None
 
-
 app = Flask(__name__)
 
 # Root route
 @app.route("/", methods=["GET"])
 def root():
-    return render_template("index.html")
+    return render_template("index.html", background_image="background.jpg")
 
 # Prediction route
 @app.route("/predict", methods=["POST"])
@@ -35,10 +34,10 @@ def predict_value():
 
         inputs = [
             float(request.form.get("release_clause", 0)) * 1000,  # Convert to €
-            float(request.form.get("intl_reputation", 0)),
+            int(request.form.get("intl_reputation", 0)),
             float(request.form.get("overall_rating", 0)),
             float(request.form.get("potential", 0)),
-            float(request.form.get("playstyles", 0)),
+            int(request.form.get("playstyles", 0)),
             float(request.form.get("total_stats", 0)),
             float(request.form.get("age", 0)),
             int(request.form.get("year", 0)),
@@ -53,12 +52,14 @@ def predict_value():
 
         return render_template(
             "output.html",
-            predicted_value=f"€{predicted_value:,.2f}",
+            predicted_value=f"{predicted_value:,.2f}",
+            background_image="background.jpg"
         )
     except ValueError:
         return "Invalid input. Please enter numeric values only."
     except Exception as e:
         return f"An error occurred during prediction: {e}"
+
 
 # Run the server
 if __name__ == "__main__":
