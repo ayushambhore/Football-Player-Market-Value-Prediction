@@ -17,5 +17,5 @@ Deployment: Flask, AWS
 Visualization: Tableau
 ## 🚀 Model Deployment
 Flask Web App: Provides real-time player value predictions.
-AWS Hosting: Ensures availability and scalability. [line](http://13.201.4.151/)
+AWS Hosting: Ensures availability and scalability. [link](http://13.201.4.151/)
 Tableau Dashboard: [link](https://public.tableau.com/app/profile/ayush.ambhore/viz/FootballPlayerStats_17388499782170/FIFADashboard)
