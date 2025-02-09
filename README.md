@@ -17,7 +17,7 @@ To build a model that predicts the market value of football players based on his
 
 ## 🛠️ Technology Stack
 
-Data Collection: Selenium, BeautifulSoup
+Data Collection: Selenium
 
 Processing & ML: Pandas, NumPy, XGBoost
 
